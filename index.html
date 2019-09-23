@@ -10,32 +10,40 @@
 
 <body>
     <header>
-        <section class="container_cabecalho">
-            <div class="imagem">
-                <img src="">
+        <section class="cabecalho">
+            <div class="cabecalho_imagem">
+                <img src="images/logos/merlins.png">
             </div>
-            <div class="busca">
-
+            <div class="cabecalho_busca">
+                <input type="search" placeholder="Search our stock">
             </div>
-            <div class="frete">
-
+            <div class="cabecalho_frete">
+                <div class="cabecalho_frete_titulo">
+                    <h2>Free shipping</h2>
+                    <span>on orders over $50</span>
+                </div>
             </div>
-            <div class="carrinho">
-
+            <div class="cabecalho_carrinho">
+                <div class="cabecalho_carrinho_imagem">
+                    <img src="images/logos/cauldron.jpg">
+                </div>
+                <div class="cabecalho_carrinho_descricao">
+                    <span>BAG: <i>1</i></span>
+                </div>
             </div>
         </section>
 
-        <nav>
-            <ul>
-                <li><a href="">Potions</a><span>▾</span></li>
-                <li><a href="">Ingredients</a><span>▾</span></li>
-                <li><a href="">Books</a><span>▾</span></li>
-                <li><a href="">Supplies</a><span>▾</span></li>
-                <li><a href="">Charms</a><span>▾</span></li>
+        <nav class="cabecalho_navegacao">
+            <ul class="cabecalho_navegacao_listas">
+                <li><a href="">Potions<span>▾</span></a></li>
+                <li><a href="">Ingredients<span>▾</span></a></li>
+                <li><a href="">Books<span>▾</span></a></li>
+                <li><a href="">Supplies<span>▾</span></a></li>
+                <li><a href="">Charms<span>▾</span></a></li>
                 <li><a href="">Clearence!</a></li>
             </ul>
 
-            <div class="area_cliente">
+            <div class="cabecalho_navegacao_area_cliente">
                 <span><a href="">Sign in</a> or <a href="">Sign up</a></span>
             </div>
         </nav>
@@ -45,7 +53,7 @@
     <main>
         <section class="vitrine">
             <div class="vitrine_titulo">
-                <h2>Potions</h2>
+                <h1>Potions</h1>
             </div>
             <div class="vitrine_container">
                 <div class="vitrine_container_pocao">
@@ -107,7 +115,36 @@
     </main>
 
     <footer>
+        <section class="informacoes">
+            <div class="informacoes_contato">
+                <nav class="informacoes_contato_navegacao">
+                    <ul class="informacoes_contato_navegacao_listas">
+                        <li>Company</li>
+                        <li>Contact us</li>
+                        <li>Shipping</li>
+                        <li>Returns</li>
+                        <li>Careers</li>
+                    </ul>
+                </nav>
+                <div class="informacoes_contato_sociais">
 
+                </div>
+                <div class="informacoes_contato_copyright">
+                    <p>&#9400; Merlin's Potions. All Rights Reserved</p>
+                </div>
+            </div>
+
+            <div class="informacoes_newsletter">
+                <form class="informacoes_newsletter_formulario">
+                    <h3>Sign up for our Newsletter</h3>
+                    <p>Sign up for our newsletter & get exclusive discounts!</p>
+                    <div class="informacoes_newsletter_formulario_inputs">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button>Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </footer>
 </body>
 

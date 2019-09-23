@@ -8,6 +8,15 @@
 body{
     font-size:1.2em;
 }
+input{
+    padding:10px;
+    border-radius:5px;
+    border:1px solid black;
+    outline:none;
+}
+button{
+    cursor:pointer;
+}
 a{
     text-decoration:none;
     color:white;
@@ -15,86 +24,122 @@ a{
 i{
     font-style:normal;
 }
+ul{
+    list-style:none;
+}
+
+
+
 header{
     width:$total;
     height:30vh;
     display:flex;
     justify-content:center;
     position:relative;
-    .container_cabecalho{
-        width:80%;
+    .cabecalho{
+        width:$total;
         height:65%;
-        background:yellow;
-        .imagem{
+        &_imagem{
             width:30%;
             height:$total;
             float:left;
             img{
-                width:100%;
-                height:100%;
+                width:$total;
+                height:$total;
             }
         }
 
-        .busca{
+        &_busca{
             width:30%;
-            height:$total;
-            background:blue;
+            height:$total - 20%;
             float:left;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            input{
+                height:40px;
+                width:80%;
+            }
         }
-        .frete{
+        &_frete{
             width:20%;
             height:$total;
-            background:magenta;
             float:left;
+            display:flex;
+            justify-content:center;
+            &_titulo{
+                margin-top:20px;
+                float:right;
+                color:$laranjaLetra;
+                font-style:italic;
+            }
         }
-        .carrinho{
+        &_carrinho{
             width:20%;
             height:$total;
             background:red;
             float:left;
-        }
-    }
-
-    nav{
-        width:100%;
-        height:35%;
-        position:absolute;
-        bottom:0px;
-        background:$roxoNavbar;
-        display:flex;
-        justify-content:center;
-        ul{
-            list-style:none;
-            width:$total - 40%;
-            height:$total;
-            display:flex;
-            justify-content: space-evenly;
-            li{
-                padding:0px 10px;
+            &_imagem{
                 height:$total;
-                float:left;
+                width:20%;  
                 display:flex;
                 align-items:center;
-                a{
-                    padding:20px 15px;
-                    border-radius:10px;
-                    &:hover{
-                        background:$roxoHover;
-                        transition:200ms;
-                    }
+                justify-content:center;
+                img{
+                    width:$total - 20%;
+                    height:40%;
                 }
             }
+            &_descricao{
+                width:60%;
+                height:$total;
+                background:blue;
+            }
         }
-
-        .area_cliente{
-            width:20%;
-            height:$total;
+        &_navegacao{
+            width:$total;
+            height:35%;
+            position:absolute;
+            bottom:0px;
+            background:$roxoNavbar;
             display:flex;
             justify-content:center;
-            align-items:center;
+                &_listas{
+                    width:$total - 40%;
+                    height:$total;
+                    display:flex;
+                    justify-content: space-evenly;
+                    li{
+                        padding:0px 10px;
+                        height:$total;
+                        float:left;
+                        display:flex;
+                        align-items:center;
+                        a{
+                            padding:20px 15px;
+                            border-radius:10px;
+                            &:hover{
+                                background:$roxoHover;
+                                transition:200ms;
+                            }
+                        }
+                    }
+                }
+            &_area_cliente{
+                width:20%;
+                height:$total;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
         }
     }
 }
+
+
+
+
+
 
 main{
     width:$total;
@@ -108,7 +153,7 @@ main{
             display:block; 
         }
         &_container{
-            width:100%;
+            width:$total;
             display:flex;
             flex-wrap:wrap;
             justify-content:space-evenly;
@@ -121,11 +166,99 @@ main{
                 justify-content:center;
                 flex-wrap:wrap;
                 &_imagem{
-                    width:100%;
+                    width:$total;
                     height:$total - 10%;
                     img{
-                        width:100%;
+                        width:$total;
+                        height:$total;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+footer{
+    width:$total;
+    height:40vh;
+    background:$cinza;
+    .informacoes{
+        height:$total;
+        display:$total;
+        display:flex;
+        justify-content:space-evenly;
+        align-items:center;
+        &_contato{
+            width:40%;
+            height:$total - 20%;
+            &_navegacao{
+                width:100%;
+                height:30%;
+                &_listas{
+                    width:100%;
+                    height:100%;
+                    li{
+                        width:30%;
+                        padding:0px 0px;
+                        float:left;
+                        text-transform:uppercase;
+                        color:$laranjaLetra;
+                        font-size:1.2em;
+                    }
+                }
+            }
+            &_sociais{
+                width:100%;
+                height:45%;
+                background:blue;
+            }
+            &_copyright{
+                width:100%;
+                height:25%;
+                display:flex;
+                align-items:center;
+            }
+        }
+        &_newsletter{
+            width:40%;
+            height:$total - 20%;
+            display:flex;
+            justify-content:center;  
+            &_formulario{
+                background:white;
+                border-radius:10px;
+                width:80%;
+                height:55%;
+                padding:30px 20px;
+                h3{
+                    font-style:italic;
+                    font-weight:100;
+                }
+                p{
+                    padding:20px 0px;
+                }
+                &_inputs{
+                    width:100%;
+                    height:30%;
+                    input{
+                        height:45%;
+                        width:60%;
+                    }
+                    button{
+                        background:$laranjaFundo;
+                        width:33%;
                         height:100%;
+                        float:right;
+                        border:none;
+                        border-radius:5px;
+                        color:white;
+                        text-transform:uppercase;
                     }
                 }
             }
