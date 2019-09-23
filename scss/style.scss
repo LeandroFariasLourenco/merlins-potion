@@ -6,6 +6,7 @@
     margin:0;
 }
 body{
+    font-family:'Oswald';
     font-size:1.2em;
 }
 input{
@@ -72,28 +73,41 @@ header{
                 float:right;
                 color:$laranjaLetra;
                 font-style:italic;
+                h2{
+                    font-weight:100;
+                    font-size:1.3em;
+                }
             }
         }
         &_carrinho{
             width:20%;
             height:$total;
-            background:red;
             float:left;
             &_imagem{
-                height:$total;
                 width:20%;  
+                height:100%;
+                float:left;
                 display:flex;
-                align-items:center;
+                margin-top:10px;
                 justify-content:center;
                 img{
-                    width:$total - 20%;
-                    height:40%;
+                    width:90%;
+                    height:45%;
                 }
             }
             &_descricao{
-                width:60%;
+                width:75%;
                 height:$total;
-                background:blue;
+                float:right;
+                display:flex;
+                span{
+                    margin-top:30px;
+                    color:grey;
+                }
+                i{
+                    color:$laranjaLetra;
+                    font-weight:bold;
+                }
             }
         }
         &_navegacao{
@@ -261,6 +275,59 @@ footer{
                         text-transform:uppercase;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    header{
+        height:40%;
+        .cabecalho{
+            &_busca{
+                display:none;
+            }
+            &_frete{
+                display:none;
+            }
+            &_navegacao{
+                display:none;
+            }
+        }
+    }
+
+    main{
+        .vitrine{
+            width:100%;
+            &_titulo{
+                text-align:center;
+                padding:0px;
+            }
+            &_container{
+                margin:0px;
+                padding-bottom:90px;
+                &_pocao{
+                    margin-bottom:30px;
+                    padding:0px;
+                    width:30%;
+                    height:200px;
+                }
+            }
+        }
+    }
+
+
+    footer{
+        flex-wrap: wrap;
+        .informacoes{
+            align-items:center;
+            justify-content:center;
+            &_contato{
+                display:none;
+            }
+            &_newsletter{
+                width:100%;
+                display:block;
             }
         }
     }
