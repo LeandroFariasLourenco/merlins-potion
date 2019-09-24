@@ -36,7 +36,7 @@
             </div>
         </section>
 
-        <nav class="cabecalho_navegacao" id="menu">
+        <nav class="cabecalho_navegacao estatico" id="menu">
             <ul class="cabecalho_navegacao_listas">
                 <li><a href="">Potions<span>▾</span></a></li>
                 <li><a href="">Ingredients<span>▾</span></a></li>
@@ -124,7 +124,36 @@
             <!--SOBREPOSICAO-->
             <div class="vitrine_sobreposicao invisivel" id="sobreposicao">
                 <div class="vitrine_sobreposicao_popup">
-                    <div class="vitrine_sobreposicao_popup_sair"><button id="sair">x</button></div>
+                    <div class="vitrine_sobreposicao_popup_sair"><span id="sair">x</span></div>
+                    <div class="vitrine_sobreposicao_popup_imagem">
+                        <img id="imagem_pocao">
+                    </div>
+                    <div class="vitrine_sobreposicao_popup_informacoes">
+                        <h2 id="titulo_pocao"></h2>
+                        
+                        <span>Use/Effect</span>
+                        <div class="vitrine_sobreposicao_popup_informacoes_json">
+                            <span id="efeitos">
+                                <p id="efeitos_pocao"> </p>
+                            </span>
+                        </div>
+                        
+                        <span>Ingredients</span>
+                        <div class="vitrine_sobreposicao_popup_informacoes_json">
+                            <span>
+                                <ul class="ingredientes_pocao">
+                                    
+                                </ul>
+                            </span>
+                        </div>
+
+                        <span>Price</span>
+                        <div class="vitrine_sobreposicao_popup_informacoes_json">
+                            <i id="preco_pocao"> </i>
+                        </div>
+                        
+                        <button>add to cart</button>
+                    </div>
                 </div>
             </div>
         </section>
