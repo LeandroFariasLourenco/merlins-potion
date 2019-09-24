@@ -1,13 +1,11 @@
 @import 'config';
 /*Importando variáveis do config*/
-
 *{
     padding:0;
     margin:0;
 }
 body{
-    font-family:'Oswald';
-    font-size:1.2em;
+    font-family:  'Oswald', Helvetica, Arial, sans-serif;
 }
 input{
     padding:10px;
@@ -30,23 +28,64 @@ ul{
 }
 
 
+.visivel{
+    display:static;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.invisivel{
+    display:none;
+}
 
 header{
     width:$total;
     height:30vh;
-    display:flex;
-    justify-content:center;
-    position:relative;
     .cabecalho{
         width:$total;
-        height:65%;
-        &_imagem{
+        height:60%;
+        &_container{
             width:30%;
-            height:$total;
+            height:80%;
             float:left;
-            img{
-                width:$total;
-                height:$total;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            &_titulo{
+                padding:10px;
+                text-align:center;
+                h1{
+                    text-transform:uppercase;
+                    color:$laranjaLetra;
+                    font-size:2em;
+                    span{
+                        font-weight:300;
+                    }
+                }
+                &_subtitulo{
+                    font-style:italic;
+                    font-weight:600;
+                    color:$roxoNavbar;
+                    background:white;
+                    position:relative;
+                    &:before , &:after{
+                        content:"";
+                        display:block;
+                        background:rgba(0,0,0,.2);
+                        height:2px;
+                        width:15%;
+                    }  
+                    &:before{
+                        position:absolute;
+                        top:5px;
+                        left:-30px;
+                    }
+                    &:after{
+                        position:absolute;
+                        top:5px;
+                        right:-30px;
+                    }
+                }
             }
         }
 
@@ -112,9 +151,7 @@ header{
         }
         &_navegacao{
             width:$total;
-            height:35%;
-            position:absolute;
-            bottom:0px;
+            height:30%;
             background:$roxoNavbar;
             display:flex;
             justify-content:center;
@@ -129,6 +166,7 @@ header{
                         float:left;
                         display:flex;
                         align-items:center;
+                        font-style:italic;
                         a{
                             padding:20px 15px;
                             border-radius:10px;
@@ -179,6 +217,8 @@ main{
                 display:flex;
                 justify-content:center;
                 flex-wrap:wrap;
+                cursor:pointer;
+                transition:200ms;
                 &_imagem{
                     width:$total;
                     height:$total - 10%;
@@ -187,8 +227,47 @@ main{
                         height:$total;
                     }
                 }
+                span{
+                    width:100%;
+                    font-weight:600;
+                    display:block;
+                    &::first-letter{
+                        text-transform:uppercase;
+                    }
+                    i{
+                        color:$laranjaLetra;
+                        font-weight:100;
+                    }
+                }
+                &:hover{
+                    opacity:0.4;
+                    transition:200ms;
+                }
             }
         }
+
+        &_sobreposicao{
+            z-index:1px;
+            width:100%;
+            height:100vh;
+            background:rgba(0,0,0,.5);
+            position:fixed;
+            top:0px;
+            left:0px;
+            transition:200ms;
+            &_popup{
+                width:70%;
+                height:50%;
+                background:white;
+                &_sair{
+                    height:5%;
+                    padding:10px 10px;
+                    text-align:right;
+                    background:orange;
+                }
+            }
+        }
+
     }
 }
 
@@ -200,11 +279,10 @@ main{
 
 footer{
     width:$total;
-    height:40vh;
     background:$cinza;
     .informacoes{
-        height:$total;
-        display:$total;
+        height:275px;
+        padding:20px 0px;
         display:flex;
         justify-content:space-evenly;
         align-items:center;
@@ -228,9 +306,15 @@ footer{
                 }
             }
             &_sociais{
-                width:100%;
-                height:45%;
-                background:blue;
+                width:70%;
+                height:50%;
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                img{
+                    width:15%;
+                    height:40%;
+                }
             }
             &_copyright{
                 width:100%;
@@ -241,7 +325,6 @@ footer{
         }
         &_newsletter{
             width:40%;
-            height:$total - 20%;
             display:flex;
             justify-content:center;  
             &_formulario{
@@ -249,7 +332,7 @@ footer{
                 border-radius:10px;
                 width:80%;
                 height:55%;
-                padding:30px 20px;
+                padding:30px 30px;
                 h3{
                     font-style:italic;
                     font-weight:100;
@@ -259,14 +342,14 @@ footer{
                 }
                 &_inputs{
                     width:100%;
-                    height:30%;
+                    height:40px;
                     input{
                         height:45%;
                         width:60%;
                     }
                     button{
                         background:$laranjaFundo;
-                        width:33%;
+                        width:32%;
                         height:100%;
                         float:right;
                         border:none;
@@ -280,7 +363,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 800px){
     header{
         height:40%;
         .cabecalho{
@@ -305,12 +388,13 @@ footer{
             }
             &_container{
                 margin:0px;
+                padding-top:0px;
                 padding-bottom:90px;
                 &_pocao{
-                    margin-bottom:30px;
+                    margin:30px 0px;
                     padding:0px;
-                    width:30%;
-                    height:200px;
+                    width:45%;
+                    height:225px;
                 }
             }
         }
