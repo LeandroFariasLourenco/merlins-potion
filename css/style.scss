@@ -29,6 +29,7 @@ button{
     padding:10px 20px;
     color:white;
     text-transform:uppercase;
+    cursor:pointer;
 }
 a{
     text-decoration:none;
@@ -213,6 +214,10 @@ header{
                 display:flex;
                 justify-content:center;
                 align-items:center;
+                span{
+                    color:$cinzaLetra;
+                    padding:0px 15px;
+                }
             }
         }
     }
@@ -251,6 +256,32 @@ header{
                 height:100vh;
                 z-index:10;
                 background:white;
+                
+                &_busca{
+                    float:left;
+                    width:80%;
+                    height:85%;
+                    display:flex;
+                    align-items:center;
+                    position:relative;
+                    input{
+                        width:90%;
+                        padding:15px 60px;
+                    }
+                    &_imagem{
+                        position:absolute;
+                        left:15px;
+                        top:35px;
+                        width:20%;
+                        height:40px;
+                        img{
+                            width:40%;
+                            height:80%;
+                        }
+                    }
+                }
+                
+                
                 &_sair{
                     width:100%;
                     height:120px;
@@ -258,6 +289,7 @@ header{
                     &_container{
                         height:100%;
                         width:20%;
+                        float:left;
                         display:flex;
                         justify-content:center;
                         align-items:center;
@@ -267,8 +299,8 @@ header{
                             height:50%;
                             position:relative;
                             span{
-                                width:65%;
-                                height:15%;
+                                width:50px;
+                                height:10px;
                                 background:$roxoNavbar;
                                 margin:-7px 0px;
                                 position:absolute;
@@ -287,14 +319,30 @@ header{
                 &_navegacao{
                     width:100%;
                     height:300px;
-                    background:red;
+                    background:$roxoNavbar;
+                    position:relative;
                     &_listas{
                         width:100%;
-                        height:50%;
-                        background:$roxoNavbar;
                         li{
-                            width:100%;
-                            height:10%;
+                            border-bottom:.5px solid rgba(255,255,255,.6);
+                            display:block;
+                            padding:10px 60px;
+                            a{
+                                font-style:italic;
+                            }
+                        }
+                    }
+                    &_area_cliente{
+                        width:100%;
+                        height:10%;
+                        display:flex;
+                        justify-content:center;
+                        position:absolute;
+                        bottom:0px;
+                        font-style:italic;
+                        span{
+                            color:$cinzaLetra;
+                            padding:0px 15px;
                         }
                     }
                 }
@@ -313,7 +361,7 @@ header{
                         text-align:center;
                         color:grey;
                     }
-                }
+                }            
             }
 
 
@@ -382,7 +430,7 @@ main{
             justify-content:space-evenly;
 
             &_pocao{
-                margin:90px 10px;
+                margin:70px 10px;
                 width:25%;
                 height:300px;
                 display:flex;
@@ -465,16 +513,40 @@ main{
                     &_json{
                         width:100%;
                         padding:20px 0px;
+                        &:last-of-type{
+                            padding:0px;
+                            padding-bottom:20px
+                        }
                         span{
                             font-weight:100;
                             font-size:1em;
                         }
-                    }
-                    
+                    }                    
                 }
             }
         }
-
+    }
+}
+@media screen and (max-width: 800px){
+    main{
+        .vitrine{
+            width:100%;
+            &_titulo{
+                text-align:center;
+                padding:0px;
+            }
+            &_container{
+                margin:0px;
+                padding-top:0px;
+                padding-bottom:90px;
+                &_pocao{
+                    margin:30px 0px;
+                    padding:0px;
+                    width:45%;
+                    height:225px;
+                }
+            }
+        }
     }
 }
 
@@ -485,14 +557,22 @@ main{
 
 
 footer{
+    
     width:100%;
     background:$cinza;
-    .informacoes{
+    
+    .mobile{
+        display:none;
+    }
+    
+    .desktop{
         height:275px;
         padding:20px 0px;
         display:flex;
         justify-content:space-evenly;
         align-items:center;
+        
+        
         &_contato{
             width:40%;
             height:80%;
@@ -569,45 +649,66 @@ footer{
         }
     }
 }
-
-
-
-
-
-@media screen and (max-width: 800px){
-    main{
-        .vitrine{
+@media screen and (max-width:800px){
+    footer{
+        height:430px;
+        background:$cinza;
+        .desktop{
+            display:none
+        }
+        .mobile{
+            display:initial;
             width:100%;
-            &_titulo{
-                text-align:center;
-                padding:0px;
-            }
-            &_container{
-                margin:0px;
-                padding-top:0px;
-                padding-bottom:90px;
-                &_pocao{
-                    margin:30px 0px;
-                    padding:0px;
-                    width:45%;
-                    height:225px;
+            height:auto;
+            display:flex;
+            justify-content:space-evenly;
+            align-items:center;
+            flex-wrap:wrap;
+            padding:5px 0px;
+            &_newsletter{
+                height:200px;
+                width:90%;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                &_formulario{
+                    width:85%;
+                    border-radius:2px;
+                    background:white;
+                    padding:20px;
+                    padding-top:0px;
+                    padding-right:0px;
+                    h3{
+                        padding:20px 0px;
+                    }
+                    p{
+                        padding-bottom:20px;
+                    }
+                    input{
+                        width:60%;
+                    }
+                    button{
+                        width:30%;
+                    }
                 }
             }
-        }
-    }
-
-
-    footer{
-        flex-wrap: wrap;
-        .informacoes{
-            align-items:center;
-            justify-content:center;
             &_contato{
-                display:none;
-            }
-            &_newsletter{
+                display:flex;
+                justify-content:center;
+                flex-wrap:wrap;
+                height:150px;
                 width:100%;
-                display:block;
+                &_sociais{
+                    width:80%;
+                    height:80%;
+                    display:flex;
+                    align-items:center;
+                    justify-content:space-evenly;
+                }
+                &_copyright{
+                    font-size:1.5em;
+                    color:$cinzaLetra;
+                }
             }
         }
     }

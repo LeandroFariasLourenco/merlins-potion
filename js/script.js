@@ -5,7 +5,8 @@ window.onload = function () {
     for (let i = 0; i < pocoes.length; i++) {
         pocoes[i].addEventListener("click", function () {
             posicaoPotions = i + 1;
-            exibirPopUp(pocoes, posicaoPotions);
+            console.log(i)
+            exibirPopUp(posicaoPotions);
         })
     }
 
@@ -16,7 +17,7 @@ window.onload = function () {
 }
 
 
-function exibirPopUp(pocao, posicaoPotions) {
+function exibirPopUp(posicaoPotions) {
     let sobreposicao = document.querySelector("#sobreposicao");
     let sair = document.querySelector("#sairVitrine");
 

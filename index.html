@@ -31,19 +31,26 @@
                             <span></span>
                         </div>
                     </div>
-                    <div class="cabecalho_mobile_sair_pesquisar">
-
+                    <div class="cabecalho_mobile_busca">
+                        <input type="search" placeholder="Search our stock">
+                        <div class="cabecalho_mobile_busca_imagem">
+                            <img src="images/logos/search.png">
+                        </div>
                     </div>
                 </div>
                 <nav class="cabecalho_mobile_navegacao">
                     <ul class="cabecalho_mobile_navegacao_listas">
-                        <li><a href="">Potions<span>▾</span></a></li>
-                        <li><a href="">Ingredients<span>▾</span></a></li>
-                        <li><a href="">Books<span>▾</span></a></li>
-                        <li><a href="">Supplies<span>▾</span></a></li>
-                        <li><a href="">Charms<span>▾</span></a></li>
+                        <li><a href="">Potions</a></li>
+                        <li><a href="">Ingredients</a></li>
+                        <li><a href="">Books</a></li>
+                        <li><a href="">Supplies</a></li>
+                        <li><a href="">Charms</a></li>
                         <li><a href="">Clearence!</a></li>
                     </ul>
+
+                    <div class="cabecalho_mobile_navegacao_area_cliente">
+                        <a href="">Sign In</a><span>or</span><a href="">Sign up</a>
+                    </div>
                 </nav>
             </section>
             <!--FIM DO MENU MOBILE-->
@@ -105,7 +112,7 @@
             </ul>
 
             <div class="cabecalho_navegacao_area_cliente">
-                <span><a href="">Sign in</a> or <a href="">Sign up</a></span>
+                <span><a href="">Sign in</a><span> or </span><a href="">Sign up</a></span>
             </div>
         </nav>
 
@@ -189,14 +196,14 @@
                     <div class="vitrine_sobreposicao_popup_informacoes">
                         <h2 id="titulo_pocao"></h2>
 
-                        <span>Use/Effect</span>
+                        <span>Use/Effect:</span>
                         <div class="vitrine_sobreposicao_popup_informacoes_json">
                             <span id="efeitos">
                                 <p id="efeitos_pocao"> </p>
                             </span>
                         </div>
 
-                        <span>Ingredients</span>
+                        <span>Ingredients:</span>
                         <div class="vitrine_sobreposicao_popup_informacoes_json">
                             <span>
                                 <ul class="ingredientes_pocao">
@@ -205,7 +212,7 @@
                             </span>
                         </div>
 
-                        <span>Price</span>
+                        <span>Price:</span>
                         <div class="vitrine_sobreposicao_popup_informacoes_json">
                             <i id="preco_pocao"> </i>
                         </div>
@@ -219,10 +226,11 @@
     </main>
 
     <footer>
-        <section class="informacoes">
-            <div class="informacoes_contato">
-                <nav class="informacoes_contato_navegacao">
-                    <ul class="informacoes_contato_navegacao_listas">
+
+        <section class="desktop">
+            <div class="desktop_contato">
+                <nav class="desktop_contato_navegacao">
+                    <ul class="desktop_contato_navegacao_listas">
                         <li>Company</li>
                         <li>Contact us</li>
                         <li>Shipping</li>
@@ -230,30 +238,63 @@
                         <li>Careers</li>
                     </ul>
                 </nav>
-                <div class="informacoes_contato_sociais">
+                <div class="desktop_contato_sociais">
                     <img src="images/logos/fb.png">
                     <img src="images/logos/twitter.png">
                     <img src="images/logos/pinterest.png">
                     <img src="images/logos/twitter.png">
                     <img src="images/logos/tumblr.png">
                 </div>
-                <div class="informacoes_contato_copyright">
+                <div class="desktop_contato_copyright">
                     <p>&#9400; 2015 Merlin's Potions. All Rights Reserved</p>
                 </div>
             </div>
 
-            <div class="informacoes_newsletter">
-                <form class="informacoes_newsletter_formulario">
+            <div class="desktop_newsletter">
+                <form class="desktop_newsletter_formulario">
                     <h3>Sign up for our Newsletter</h3>
                     <p>Sign up for our newsletter & get exclusive discounts!</p>
-                    <div class="informacoes_newsletter_formulario_inputs">
+                    <div class="desktop_newsletter_formulario_inputs">
                         <input type="email" placeholder="Enter your email" required>
                         <button>Submit</button>
                     </div>
                 </form>
             </div>
         </section>
+
+
+
+        <!--FOOTER PARA MOBILE-->
+        <section class="mobile">
+            <div class="mobile_newsletter">
+                <form class="mobile_newsletter_formulario">
+                    <h3>Sign up for our Newsletter</h3>
+                    <p>Sign up for our newsletter & get exclusive discounts!</p>
+                    <div class="mobile_newsletter_formulario_inputs">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button>Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="mobile_contato">
+                <div class="mobile_contato_sociais">
+                    <img src="images/logos/fb.png">
+                    <img src="images/logos/twitter.png">
+                    <img src="images/logos/pinterest.png">
+                    <img src="images/logos/twitter.png">
+                    <img src="images/logos/tumblr.png">
+                </div>
+                <div class="mobile_contato_copyright">
+                    <p>&#9400; 2015 Merlin's Potions. All Rights Reserved</p>
+                </div>
+            </div>
+
+        </section>
+        <!--FIM DO FOOTER PARA MOBILE-->
+
     </footer>
+
+
 </body>
 
 </html>
