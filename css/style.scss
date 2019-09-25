@@ -37,10 +37,12 @@ ul{
 
 //Classes para efeitos de JS
 .visivel{
-    display:static;
     display:flex;
     justify-content:center;
     align-items:center;
+}
+.ativar{
+    display:initial;
 }
 .invisivel{
     display:none;
@@ -55,6 +57,7 @@ header{
     .cabecalho{
         width:$total;
         height:60%;
+
         &_container{
             width:30%;
             height:80%;
@@ -193,6 +196,98 @@ header{
         }
     }
 }
+@media screen and (max-width:800px){
+    header{
+        height:20vh;
+        position:relative;
+
+        .cabecalho{
+            height:80%;
+            &_hamburger{
+                width:15%;
+                height:100%;
+                float:left;
+                cursor:pointer;
+                &_botao{ 
+                    width:60%;
+                    height:50%;
+                    span{
+                        background:$roxoNavbar;
+                        width:100%;
+                        height:10px;
+                        margin:5px 0px;
+                        display:block;
+                        border-radius:20px;
+                    }
+                }
+            }
+            
+            &_mobile{ 
+                &_sair{
+                    width:100%;
+                    height:100%;
+                    background:white;
+                }
+                &_navegacao{
+                    width:100%;
+                    height:100vh;
+                    background:red;
+                    &_listas{
+                        width:100%;
+                        height:50%;
+                        background:$roxoNavbar;
+                        li{
+                            width:100%;
+                            height:10%;
+                        }
+                    }
+                }
+            }
+
+
+            &_container{
+                float:left;
+                width:70%;
+                height:100%;
+            }
+            &_busca{
+                display:none;
+            }
+            &_frete{
+                display:none;
+            }
+            &_navegacao{
+                display:none;
+                &_mobile{
+                    display:none;
+                }
+            }
+            &_carrinho{
+                float:left;
+                width:15%;
+                &_imagem{
+                    width:100%;
+                    height:70%;
+                    margin-top:0px;
+                    position:relative;
+                    img{
+                        position:absolute;
+                        bottom:0px;
+                        width:55%;
+                        height:90%;
+                    }
+                }
+                &_descricao{
+                    width:100%;
+                    height:20%;
+                    display:initial;
+                    text-align:center;
+                }
+            }
+        }
+    }
+}
+
 
 
 
@@ -406,21 +501,6 @@ footer{
 }
 
 @media screen and (max-width: 800px){
-    header{
-        height:40%;
-        .cabecalho{
-            &_busca{
-                display:none;
-            }
-            &_frete{
-                display:none;
-            }
-            &_navegacao{
-                display:none;
-            }
-        }
-    }
-
     main{
         .vitrine{
             width:100%;

@@ -11,6 +11,33 @@
 <body>
     <header>
         <section class="cabecalho">
+
+            <!--MENU MOBILE-->
+            <section class="cabecalho_hamburger visivel">
+                <div class="cabecalho_hamburger_botao">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </section>
+
+            
+            <div class="cabecalho_mobile invisivel">
+                <div class="cabecalho_mobile_sair">
+                    
+                </div>
+                    <nav class="cabecalho_mobile_navegacao">
+                        <ul class="cabecalho_mobile_navegacao_listas">
+                            <li><a href="">Potions<span>▾</span></a></li>
+                            <li><a href="">Ingredients<span>▾</span></a></li>
+                            <li><a href="">Books<span>▾</span></a></li>
+                            <li><a href="">Supplies<span>▾</span></a></li>
+                            <li><a href="">Charms<span>▾</span></a></li>
+                            <li><a href="">Clearence!</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
             <div class="cabecalho_container">
                 <article class="cabecalho_container_titulo">
                     <h1>Merlin's <span>Potion</span></h1>
@@ -34,9 +61,11 @@
                     <span>BAG: <i>1</i></span>
                 </div>
             </div>
+
+
         </section>
 
-        <nav class="cabecalho_navegacao estatico" id="menu">
+        <nav class="cabecalho_navegacao" id="menu">
             <ul class="cabecalho_navegacao_listas">
                 <li><a href="">Potions<span>▾</span></a></li>
                 <li><a href="">Ingredients<span>▾</span></a></li>
@@ -130,19 +159,19 @@
                     </div>
                     <div class="vitrine_sobreposicao_popup_informacoes">
                         <h2 id="titulo_pocao"></h2>
-                        
+
                         <span>Use/Effect</span>
                         <div class="vitrine_sobreposicao_popup_informacoes_json">
                             <span id="efeitos">
                                 <p id="efeitos_pocao"> </p>
                             </span>
                         </div>
-                        
+
                         <span>Ingredients</span>
                         <div class="vitrine_sobreposicao_popup_informacoes_json">
                             <span>
                                 <ul class="ingredientes_pocao">
-                                    
+
                                 </ul>
                             </span>
                         </div>
@@ -151,7 +180,7 @@
                         <div class="vitrine_sobreposicao_popup_informacoes_json">
                             <i id="preco_pocao"> </i>
                         </div>
-                        
+
                         <button>add to cart</button>
                     </div>
                 </div>

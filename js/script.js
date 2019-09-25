@@ -1,6 +1,6 @@
 window.onload = function () {
     exibirPopUp();
-
+    ativarMenu();
 
     function exibirPopUp() {
         let pocoes = document.getElementsByClassName("vitrine_container_pocao");
@@ -44,8 +44,21 @@ window.onload = function () {
         }
     }
 
+    function ativarMenu(){
+        let botao = document.querySelector(".cabecalho_hamburger");
+        let menu = document.querySelector(".cabecalho_hamburger_botao");
+        let opcoes = document.querySelector(".cabecalho_mobile");
+        menu.addEventListener("click", function (){
+            opcoes.classList.add("ativar");
+            opcoes.classList.remove("invisivel");
+
+            botao.classList.add("invisivel");
+            botao.classList.remove("visivel");
+        }) 
+    }
+
     function get(url) {
-        var http = new XMLHttpRequest();
+        let http = new XMLHttpRequest();
         http.open("GET", url, false);
         http.send(null);
         return http.responseText;
