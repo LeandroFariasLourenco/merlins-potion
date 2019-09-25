@@ -16,6 +16,31 @@ input {
   outline: none;
 }
 
+input:focus {
+  -webkit-box-shadow: 0px 0px 20px rgba(215, 58, 30, 0.6);
+          box-shadow: 0px 0px 20px rgba(215, 58, 30, 0.6);
+  background: rgba(215, 58, 30, 0.6);
+  color: white;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: white;
+}
+
+input:focus:-ms-input-placeholder {
+  color: white;
+}
+
+input:focus::-ms-input-placeholder {
+  color: white;
+}
+
+input:focus::placeholder {
+  color: white;
+}
+
 button {
   background: #d73a1e;
   border: none;
@@ -141,11 +166,25 @@ header .cabecalho_busca {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 header .cabecalho_busca input {
   height: 40px;
   width: 80%;
+  padding-left: 45px;
+}
+
+header .cabecalho_busca_imagem {
+  position: absolute;
+  left: 50px;
+  width: 5%;
+  height: 20px;
+}
+
+header .cabecalho_busca_imagem img {
+  width: 100%;
+  height: 100%;
 }
 
 header .cabecalho_frete {
@@ -272,7 +311,7 @@ header .cabecalho_navegacao_area_cliente {
   }
   header .cabecalho_hamburger {
     width: 15%;
-    height: 100%;
+    height: 75%;
     float: left;
     cursor: pointer;
   }
@@ -288,14 +327,59 @@ header .cabecalho_navegacao_area_cliente {
     display: block;
     border-radius: 20px;
   }
+  header .cabecalho_mobile {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: white;
+  }
   header .cabecalho_mobile_sair {
     width: 100%;
-    height: 100%;
+    height: 120px;
     background: white;
+  }
+  header .cabecalho_mobile_sair_container {
+    height: 100%;
+    width: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .cabecalho_mobile_sair_container_botao {
+    cursor: pointer;
+    width: 80%;
+    height: 50%;
+    position: relative;
+  }
+  header .cabecalho_mobile_sair_container_botao span {
+    width: 65%;
+    height: 15%;
+    background: #523468;
+    margin: -7px 0px;
+    position: absolute;
+    left: 15px;
+    bottom: 40px;
+    display: block;
+    border-radius: 20px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  header .cabecalho_mobile_sair_container_botao span:last-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
   header .cabecalho_mobile_navegacao {
     width: 100%;
-    height: 100vh;
+    height: 300px;
     background: red;
   }
   header .cabecalho_mobile_navegacao_listas {
@@ -307,10 +391,31 @@ header .cabecalho_navegacao_area_cliente {
     width: 100%;
     height: 10%;
   }
+  header .cabecalho_mobile_frete {
+    display: block;
+    width: 100%;
+    height: 25%;
+    background: #e6e6e6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .cabecalho_mobile_frete h2 {
+    font-style: italic;
+    font-weight: 100;
+    text-align: center;
+    color: grey;
+  }
   header .cabecalho_container {
     float: left;
     width: 70%;
-    height: 100%;
+    height: 75%;
   }
   header .cabecalho_busca {
     display: none;
@@ -321,12 +426,10 @@ header .cabecalho_navegacao_area_cliente {
   header .cabecalho_navegacao {
     display: none;
   }
-  header .cabecalho_navegacao_mobile {
-    display: none;
-  }
   header .cabecalho_carrinho {
     float: left;
     width: 15%;
+    height: 75%;
   }
   header .cabecalho_carrinho_imagem {
     width: 100%;
@@ -337,7 +440,7 @@ header .cabecalho_navegacao_area_cliente {
   header .cabecalho_carrinho_imagem img {
     position: absolute;
     bottom: 0px;
-    width: 55%;
+    width: 100%;
     height: 90%;
   }
   header .cabecalho_carrinho_descricao {
@@ -461,7 +564,7 @@ main .vitrine_sobreposicao_popup_sair span {
 }
 
 main .vitrine_sobreposicao_popup_imagem {
-  width: 60%;
+  width: 55%;
   float: left;
   display: -webkit-box;
   display: -ms-flexbox;

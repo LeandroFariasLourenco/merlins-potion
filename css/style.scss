@@ -13,6 +13,15 @@ input{
     border:1px solid black;
     outline:none;
 }
+input:focus{
+    box-shadow:0px 0px 20px rgba(215, 58, 30, .6);
+    background:rgba(215, 58, 30, .6);
+    color:white;
+    transition:200ms;
+    &::placeholder{
+        color:white;
+    }
+}
 button{
     background:$laranjaFundo;
     border:none;
@@ -52,10 +61,10 @@ ul{
 
 
 header{
-    width:$total;
+    width:100%;
     height:30vh;
     .cabecalho{
-        width:$total;
+        width:100%;
         height:60%;
 
         &_container{
@@ -102,22 +111,33 @@ header{
                 }
             }
         }
-
         &_busca{
             width:30%;
-            height:$total - 20%;
+            height:80%;
             float:left;
             display:flex;
             align-items:center;
             justify-content:center;
+            position:relative;
             input{
                 height:40px;
                 width:80%;
+                padding-left:45px;
+            }
+            &_imagem{
+                position:absolute;
+                left:50px;
+                width:5%;
+                height:20px;
+                img{
+                    width:100%;
+                    height:100%;
+                }
             }
         }
         &_frete{
             width:20%;
-            height:$total;
+            height:100%;
             float:left;
             &_titulo{
                 margin-top:20px;
@@ -130,9 +150,10 @@ header{
                 }
             }
         }
+
         &_carrinho{
             width:20%;
-            height:$total;
+            height:100%;
             float:right;
             &_imagem{
                 width:40%;  
@@ -148,7 +169,7 @@ header{
             }
             &_descricao{
                 width:50%;
-                height:$total;
+                height:100%;
                 float:left;
                 display:flex;
                 span{
@@ -158,7 +179,7 @@ header{
             }
         }
         &_navegacao{
-            width:$total;
+            width:100%;
             height:75px;
             display:flex;
             justify-content:center;
@@ -170,7 +191,7 @@ header{
                     li{
                         margin:0px 10px;
                         padding:0px 10px;
-                        height:$total;
+                        height:100%;
                         float:left;
                         display:flex;
                         align-items:center;
@@ -188,7 +209,7 @@ header{
             &_area_cliente{
                 width:20%;
                 float:left;
-                height:$total;
+                height:100%;
                 display:flex;
                 justify-content:center;
                 align-items:center;
@@ -201,11 +222,11 @@ header{
         height:20vh;
         position:relative;
 
-        .cabecalho{
+        .cabecalho{    
             height:80%;
             &_hamburger{
                 width:15%;
-                height:100%;
+                height:75%;
                 float:left;
                 cursor:pointer;
                 &_botao{ 
@@ -223,14 +244,49 @@ header{
             }
             
             &_mobile{ 
+                position:fixed;
+                top:0px;
+                left:0px;
+                width:100%;
+                height:100vh;
+                z-index:10;
+                background:white;
                 &_sair{
                     width:100%;
-                    height:100%;
+                    height:120px;
                     background:white;
+                    &_container{
+                        height:100%;
+                        width:20%;
+                        display:flex;
+                        justify-content:center;
+                        align-items:center;
+                        &_botao{
+                            cursor:pointer;
+                            width:80%;
+                            height:50%;
+                            position:relative;
+                            span{
+                                width:65%;
+                                height:15%;
+                                background:$roxoNavbar;
+                                margin:-7px 0px;
+                                position:absolute;
+                                left:15px;
+                                bottom:40px;
+                                display:block;
+                                border-radius:20px;
+                                transform:rotate(45deg);
+                            &:last-child{
+                                transform:rotate(-45deg);
+                            }
+                            }
+                        }
+                    }
                 }
                 &_navegacao{
                     width:100%;
-                    height:100vh;
+                    height:300px;
                     background:red;
                     &_listas{
                         width:100%;
@@ -242,13 +298,29 @@ header{
                         }
                     }
                 }
+
+                &_frete{
+                    display:block;
+                    width:100%;
+                    height:25%;
+                    background:$cinza;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    h2{
+                        font-style:italic;
+                        font-weight:100;
+                        text-align:center;
+                        color:grey;
+                    }
+                }
             }
 
 
             &_container{
                 float:left;
                 width:70%;
-                height:100%;
+                height:75%;
             }
             &_busca{
                 display:none;
@@ -258,13 +330,11 @@ header{
             }
             &_navegacao{
                 display:none;
-                &_mobile{
-                    display:none;
-                }
             }
             &_carrinho{
                 float:left;
                 width:15%;
+                height:75%;
                 &_imagem{
                     width:100%;
                     height:70%;
@@ -273,7 +343,7 @@ header{
                     img{
                         position:absolute;
                         bottom:0px;
-                        width:55%;
+                        width:100%;
                         height:90%;
                     }
                 }
@@ -295,7 +365,7 @@ header{
 
 
 main{
-    width:$total;
+    width:100%;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -306,7 +376,7 @@ main{
             display:block; 
         }
         &_container{
-            width:$total;
+            width:100%;
             display:flex;
             flex-wrap:wrap;
             justify-content:space-evenly;
@@ -321,11 +391,11 @@ main{
                 cursor:pointer;
                 transition:200ms;
                 &_imagem{
-                    width:$total;
-                    height:$total - 10%;
+                    width:100%;
+                    height:90%;
                     img{
-                        width:$total;
-                        height:$total;
+                        width:100%;
+                        height:100%;
                     }
                 }
                 span{
@@ -373,7 +443,7 @@ main{
                     }
                 }
                 &_imagem{
-                    width:60%;
+                    width:55%;
                     float:left;
                     display:flex;
                     align-items:center;
@@ -415,7 +485,7 @@ main{
 
 
 footer{
-    width:$total;
+    width:100%;
     background:$cinza;
     .informacoes{
         height:275px;
@@ -425,7 +495,7 @@ footer{
         align-items:center;
         &_contato{
             width:40%;
-            height:$total - 20%;
+            height:80%;
             &_navegacao{
                 width:100%;
                 height:30%;
@@ -499,6 +569,10 @@ footer{
         }
     }
 }
+
+
+
+
 
 @media screen and (max-width: 800px){
     main{

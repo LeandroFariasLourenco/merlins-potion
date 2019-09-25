@@ -1,66 +1,94 @@
 window.onload = function () {
-    exibirPopUp();
-    ativarMenu();
+    let pocoes = document.getElementsByClassName("vitrine_container_pocao");
+    var posicaoPotions = 0;
 
-    function exibirPopUp() {
-        let pocoes = document.getElementsByClassName("vitrine_container_pocao");
-        let sobreposicao = document.querySelector("#sobreposicao");
-        let sair = document.querySelector("#sair");
-
-        let titulo = document.getElementById("titulo_pocao")
-        let efeito = document.getElementById("efeitos_pocao");
-        let preco = document.getElementById("preco_pocao");
-        let imagem = document.getElementById("imagem_pocao");
-
-        let ingredientes = document.querySelector(".ingredientes_pocao");
-        let conteudoListas = "";
-        let tamanhoIngredientes = null;
-
-        //Pegando JSON das poções
-        let json = JSON.parse(get("https://cdn.rawgit.com/LucasRuy/1d4a5d45e2ea204d712d0b324af28bab/raw/342e0e9277be486102543c7f50ef5fcf193234b6/potions.json"));
-
-        for (let i = 0; i < pocoes.length; i++) {
-            pocoes[i].addEventListener("click", function () {
-                sobreposicao.classList.remove("invisivel");
-                sobreposicao.classList.add("visivel");
-
-                titulo.innerHTML = json.potions[i + 1].name;
-                efeito.innerHTML = json.potions[i + 1].effect;
-                preco.innerHTML = "$" + json.potions[i + 1].price;
-                imagem.src = "images/products/" + json.potions[i + 1].image;
-
-                tamanhoIngredientes = json.potions[i + 1].ingredients.length;
-                for (let j = 0; j < tamanhoIngredientes; j++) {
-                    conteudoListas += "<li>" + json.potions[i + 1].ingredients[j] + "</li>";
-                }
-                ingredientes.innerHTML = conteudoListas;
-                conteudoListas = "";
-
-                sair.addEventListener("click", function () {
-                    sobreposicao.classList.remove("visivel");
-                    sobreposicao.classList.add("invisivel");
-                })
-            })
-        }
+    for (let i = 0; i < pocoes.length; i++) {
+        pocoes[i].addEventListener("click", function () {
+            posicaoPotions = i + 1;
+            exibirPopUp(pocoes, posicaoPotions);
+        })
     }
 
-    function ativarMenu(){
-        let botao = document.querySelector(".cabecalho_hamburger");
-        let menu = document.querySelector(".cabecalho_hamburger_botao");
-        let opcoes = document.querySelector(".cabecalho_mobile");
-        menu.addEventListener("click", function (){
-            opcoes.classList.add("ativar");
-            opcoes.classList.remove("invisivel");
+    document.querySelector(".cabecalho_hamburger_botao").addEventListener("click", function () {
+        ativarMenuMobile();
+    })
 
-            botao.classList.add("invisivel");
-            botao.classList.remove("visivel");
-        }) 
-    }
+}
 
-    function get(url) {
-        let http = new XMLHttpRequest();
-        http.open("GET", url, false);
-        http.send(null);
-        return http.responseText;
+
+function exibirPopUp(pocao, posicaoPotions) {
+    let sobreposicao = document.querySelector("#sobreposicao");
+    let sair = document.querySelector("#sairVitrine");
+
+    sobreposicao.classList.remove("invisivel");
+    sobreposicao.classList.add("visivel");
+
+    preencherPopUp(posicaoPotions);
+
+    sair.addEventListener("click", function () {
+        sobreposicao.classList.remove("visivel");
+        sobreposicao.classList.add("invisivel");
+    })
+}
+
+
+function preencherPopUp(posicaoPotions) {
+
+    let titulo = document.getElementById("titulo_pocao")
+    let efeito = document.getElementById("efeitos_pocao");
+    let preco = document.getElementById("preco_pocao");
+    let imagem = document.getElementById("imagem_pocao");
+
+    let ingredientes = document.querySelector(".ingredientes_pocao");
+    let conteudoListas = "";
+    let tamanhoIngredientes = null;
+
+    //Pegando JSON das poções
+    let json = JSON.parse(get("https://cdn.rawgit.com/LucasRuy/1d4a5d45e2ea204d712d0b324af28bab/raw/342e0e9277be486102543c7f50ef5fcf193234b6/potions.json"));
+
+    titulo.innerHTML = json.potions[posicaoPotions].name;
+    efeito.innerHTML = json.potions[posicaoPotions].effect;
+    preco.innerHTML = "$" + json.potions[posicaoPotions].price;
+    imagem.src = "images/products/" + json.potions[posicaoPotions].image;
+
+    tamanhoIngredientes = json.potions[posicaoPotions].ingredients.length;
+    for (let j = 0; j < tamanhoIngredientes; j++) {
+        conteudoListas += "<li>" + json.potions[posicaoPotions].ingredients[j] + "</li>";
     }
+    ingredientes.innerHTML = conteudoListas;
+    conteudoListas = "";
+}
+
+
+function ativarMenuMobile() {
+    let botao = document.querySelector(".cabecalho_hamburger");
+    let opcoes = document.querySelector(".cabecalho_mobile");
+    let main = document.querySelector("main");
+    let footer = document.querySelector("footer");
+    let sair = document.getElementById("sairMenu");
+    
+    opcoes.classList.remove("invisivel");
+    opcoes.classList.add("ativar");
+
+    footer.classList.add("invisivel");
+    main.classList.add("invisivel");
+
+    sair.addEventListener("click", function(){
+        botao.classList.add("visivel")
+        botao.classList.remove("invisivel")
+
+        opcoes.classList.remove("ativar")
+        opcoes.classList.add("invisivel")
+
+        footer.classList.remove("invisivel")
+        main.classList.remove("invisivel")
+    })
+}
+
+
+function get(url) {
+    let http = new XMLHttpRequest();
+    http.open("GET", url, false);
+    http.send(null);
+    return http.responseText;
 }

@@ -12,6 +12,8 @@
     <header>
         <section class="cabecalho">
 
+
+
             <!--MENU MOBILE-->
             <section class="cabecalho_hamburger visivel">
                 <div class="cabecalho_hamburger_botao">
@@ -21,22 +23,32 @@
                 </div>
             </section>
 
-            
-            <div class="cabecalho_mobile invisivel">
+            <section class="cabecalho_mobile invisivel">
                 <div class="cabecalho_mobile_sair">
-                    
+                    <div class="cabecalho_mobile_sair_container">
+                        <div id="sairMenu" class="cabecalho_mobile_sair_container_botao">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="cabecalho_mobile_sair_pesquisar">
+
+                    </div>
                 </div>
-                    <nav class="cabecalho_mobile_navegacao">
-                        <ul class="cabecalho_mobile_navegacao_listas">
-                            <li><a href="">Potions<span>▾</span></a></li>
-                            <li><a href="">Ingredients<span>▾</span></a></li>
-                            <li><a href="">Books<span>▾</span></a></li>
-                            <li><a href="">Supplies<span>▾</span></a></li>
-                            <li><a href="">Charms<span>▾</span></a></li>
-                            <li><a href="">Clearence!</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                <nav class="cabecalho_mobile_navegacao">
+                    <ul class="cabecalho_mobile_navegacao_listas">
+                        <li><a href="">Potions<span>▾</span></a></li>
+                        <li><a href="">Ingredients<span>▾</span></a></li>
+                        <li><a href="">Books<span>▾</span></a></li>
+                        <li><a href="">Supplies<span>▾</span></a></li>
+                        <li><a href="">Charms<span>▾</span></a></li>
+                        <li><a href="">Clearence!</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <!--FIM DO MENU MOBILE-->
+
+
 
             <div class="cabecalho_container">
                 <article class="cabecalho_container_titulo">
@@ -46,13 +58,21 @@
             </div>
             <div class="cabecalho_busca">
                 <input type="search" placeholder="Search our stock">
-            </div>
-            <div class="cabecalho_frete">
-                <div class="cabecalho_frete_titulo">
-                    <h2>Free shipping</h2>
-                    <span>on orders over $50</span>
+                <div class="cabecalho_busca_imagem">
+                    <img src="images/logos/search.png">
                 </div>
             </div>
+
+            <div class="cabecalho_frete">
+                <div class="cabecalho_frete_desktop">
+                    <div class="cabecalho_frete_titulo">
+                        <h2>Free shipping</h2>
+                        <span>on orders over $50</span>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="cabecalho_carrinho">
                 <div class="cabecalho_carrinho_imagem">
                     <img src="images/logos/cauldron.jpg">
@@ -61,6 +81,15 @@
                     <span>BAG: <i>1</i></span>
                 </div>
             </div>
+
+
+            <!--FRETE PARA MOBILE-->
+            <div class="cabecalho_mobile_frete invisivel">
+                <div class="cabecalho_mobile_frete_titulo">
+                    <h2>Free shipping on orders over $50</h2>
+                </div>
+            </div>
+            <!--FIM DO FRETE PARA MOBILE-->
 
 
         </section>
@@ -153,7 +182,7 @@
             <!--SOBREPOSICAO-->
             <div class="vitrine_sobreposicao invisivel" id="sobreposicao">
                 <div class="vitrine_sobreposicao_popup">
-                    <div class="vitrine_sobreposicao_popup_sair"><span id="sair">x</span></div>
+                    <div class="vitrine_sobreposicao_popup_sair"><span id="sairVitrine">x</span></div>
                     <div class="vitrine_sobreposicao_popup_imagem">
                         <img id="imagem_pocao">
                     </div>
@@ -185,6 +214,7 @@
                     </div>
                 </div>
             </div>
+
         </section>
     </main>
 
