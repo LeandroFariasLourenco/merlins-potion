@@ -59,6 +59,17 @@ ul{
 }
 
 
+::-webkit-scrollbar{
+    background:$roxoHover;
+}
+::-webkit-scrollbar-thumb{
+    border-radius:20px;
+    background:$cinza;
+    &:hover{
+        background:$cinzaLetra;
+    }
+}
+
 
 
 header{
@@ -68,6 +79,11 @@ header{
         width:100%;
         height:60%;
 
+        &_mobile{
+            &_frete{
+                display:none;
+            }
+        }
         &_container{
             width:30%;
             height:80%;
@@ -76,19 +92,21 @@ header{
             justify-content:center;
             align-items:center;
             &_titulo{
-                padding:10px;
+                margin-top:15px;
                 text-align:center;
                 h1{
                     text-transform:uppercase;
                     color:$laranjaLetra;
-                    font-size:2em;
+                    font-size:2.18em;
+                    font-weight:500;
                     span{
                         font-weight:300;
                     }
                 }
                 &_subtitulo{
+                    font-family:serif;
                     font-style:italic;
-                    font-weight:600;
+                    font-weight:900;
                     color:$roxoNavbar;
                     background:white;
                     position:relative;
@@ -97,17 +115,17 @@ header{
                         display:block;
                         background:rgba(0,0,0,.2);
                         height:2px;
-                        width:15%;
+                        width:20%;
                     }  
                     &:before{
                         position:absolute;
-                        top:5px;
-                        left:-30px;
+                        top:8px;
+                        left:-36px;
                     }
                     &:after{
                         position:absolute;
-                        top:5px;
-                        right:-30px;
+                        top:8px;
+                        right:-36px;
                     }
                 }
             }
@@ -140,13 +158,14 @@ header{
             width:20%;
             height:100%;
             float:left;
+            font-family:serif;
             &_titulo{
                 margin-top:20px;
                 float:right;
                 color:$laranjaLetra;
                 font-style:italic;
                 h2{
-                    font-weight:100;
+                    font-weight:900;
                     font-size:1.3em;
                 }
             }
@@ -164,7 +183,7 @@ header{
                 margin-top:15px;
                 justify-content:center;
                 img{
-                    width:40%;
+                    width:40px;
                     height:45%;
                 }
             }
@@ -197,6 +216,7 @@ header{
                         display:flex;
                         align-items:center;
                         font-style:italic;
+                        font-weight:400; 
                         a{
                             padding:20px 15px;
                             border-radius:10px;
@@ -214,6 +234,7 @@ header{
                 display:flex;
                 justify-content:center;
                 align-items:center;
+                font-style:italic;
                 span{
                     color:$cinzaLetra;
                     padding:0px 15px;
@@ -349,15 +370,16 @@ header{
 
                 &_frete{
                     display:block;
+                    padding:5px;
+                    position:absolute;
+                    bottom:0px;
                     width:100%;
-                    height:25%;
                     background:$cinza;
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
                     h2{
+                        font-size:1.2em;
+                        font-family:Arial;
                         font-style:italic;
-                        font-weight:100;
+                        font-weight:400;
                         text-align:center;
                         color:grey;
                     }
@@ -391,7 +413,7 @@ header{
                     img{
                         position:absolute;
                         bottom:0px;
-                        width:100%;
+                        width:40px;
                         height:90%;
                     }
                 }
@@ -424,6 +446,7 @@ main{
             display:block; 
         }
         &_container{
+            padding-bottom:40px;
             width:100%;
             display:flex;
             flex-wrap:wrap;
@@ -448,7 +471,7 @@ main{
                 }
                 span{
                     width:100%;
-                    font-weight:600;
+                    font-weight:900;
                     display:block;
                     &::first-letter{
                         text-transform:uppercase;
@@ -483,9 +506,11 @@ main{
                 background:white;
                 &_sair{
                     height:50px;
-                    padding:10px 10px;
+                    padding:2px 10px;
                     text-align:right;
                     span{
+                        font-family:arial;
+                        font-size:1.2em;
                         cursor:pointer;
                         text-transform:uppercase;
                     }
@@ -540,9 +565,9 @@ main{
                 padding-top:0px;
                 padding-bottom:90px;
                 &_pocao{
-                    margin:30px 0px;
+                    margin:25px 0px;
                     padding:0px;
-                    width:45%;
+                    width:48%;
                     height:225px;
                 }
             }
@@ -552,14 +577,14 @@ main{
             &_popup{
                 position:relative;
                 width:80%;
-                padding:5px 20px;
+                padding:10px 20px;
                 &_sair{
                     position:absolute;
                     top:0px;
                     right:0px;
-                    padding:0px;
+                    padding:0px 5px;
                     span{
-                        font-size:1.9em;
+                        font-size:1.5em;
                     }
                 }
                 &_imagem{
@@ -575,6 +600,16 @@ main{
                     width:100%;
                     display:block;
                     text-align:center;
+                    h2{
+                        font-size:1.2em;
+                    }
+                    span{
+                        font-size:1em;
+                    }
+                    &_json{
+                        padding:0px;
+                        padding-bottom:5px;
+                    }
                 }
             }
         }
@@ -616,31 +651,38 @@ footer{
                     width:100%;
                     height:100%;
                     li{
-                        width:30%;
-                        padding:0px 0px;
+                        font-family:Arial;
+                        padding:0px 30px;
+                        padding-left:0px;
                         float:left;
                         text-transform:uppercase;
                         color:$laranjaLetra;
-                        font-size:1.2em;
+                        font-size:1.4em;
+                        font-weight:lighter;
                     }
                 }
             }
             &_sociais{
-                width:70%;
+                width:60%;
                 height:50%;
                 display:flex;
                 justify-content:space-between;
                 align-items:center;
                 img{
-                    width:15%;
+                    width:50px;
                     height:40%;
                 }
             }
             &_copyright{
                 width:100%;
                 height:25%;
+                color:$cinzaLetra;
                 display:flex;
                 align-items:center;
+                p{
+                    font-family:arial;
+                    font-size:1.1em;
+                }
             }
         }
         &_newsletter{
