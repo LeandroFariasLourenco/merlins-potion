@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merlin's Potion</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i&display=swap" rel="stylesheet">
+
+    <!--IMPORTAÇÃO DE DEPENDÊNCIAS-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/products/aging-potion.png">
     <script src="js/script.js"></script>
+
 </head>
 
 <body>
     <header>
         <section class="cabecalho">
-
-
 
             <!--MENU MOBILE-->
             <section class="cabecalho_hamburger visivel">
@@ -61,6 +63,7 @@
 
 
 
+            <!--MENU PADRÃO DESKTOP-->
             <div class="cabecalho_container">
                 <article class="cabecalho_container_titulo">
                     <h1>Merlin's <span>Potion</span></h1>
@@ -93,6 +96,21 @@
                 </div>
             </div>
 
+            <nav class="cabecalho_navegacao" id="menu">
+                <ul class="cabecalho_navegacao_listas">
+                    <li><a href="">Potions<span>▾</span></a></li>
+                    <li><a href="">Ingredients<span>▾</span></a></li>
+                    <li><a href="">Books<span>▾</span></a></li>
+                    <li><a href="">Supplies<span>▾</span></a></li>
+                    <li><a href="">Charms<span>▾</span></a></li>
+                    <li><a href="">Clearence!</a></li>
+                </ul>
+
+                <div class="cabecalho_navegacao_area_cliente">
+                    <span><a href="">Sign in</a><span> or </span><a href="">Sign up</a></span>
+                </div>
+            </nav>
+            <!--FIM DO MENU PADRÃO DESKTOP-->
 
             <!--FRETE PARA MOBILE-->
             <div class="cabecalho_mobile_frete">
@@ -102,28 +120,12 @@
 
 
         </section>
-
-        <nav class="cabecalho_navegacao" id="menu">
-            <ul class="cabecalho_navegacao_listas">
-                <li><a href="">Potions<span>▾</span></a></li>
-                <li><a href="">Ingredients<span>▾</span></a></li>
-                <li><a href="">Books<span>▾</span></a></li>
-                <li><a href="">Supplies<span>▾</span></a></li>
-                <li><a href="">Charms<span>▾</span></a></li>
-                <li><a href="">Clearence!</a></li>
-            </ul>
-
-            <div class="cabecalho_navegacao_area_cliente">
-                <span><a href="">Sign in</a><span> or </span><a href="">Sign up</a></span>
-            </div>
-        </nav>
-
     </header>
 
     <main>
         <section class="vitrine">
             <div class="vitrine_titulo">
-                <h1>Potions</h1>
+                <h2>Potions</h2>
             </div>
             <div class="vitrine_container">
                 <div class="vitrine_container_pocao">
@@ -183,11 +185,6 @@
             </div>
 
 
-
-
-
-
-
             <!--SOBREPOSICAO-->
             <div class="vitrine_sobreposicao invisivel" id="sobreposicao">
                 <div class="vitrine_sobreposicao_popup">
@@ -228,7 +225,7 @@
     </main>
 
     <footer>
-
+        <!--FOOTER PARA DESKTOP-->
         <section class="desktop">
             <div class="desktop_contato">
                 <nav class="desktop_contato_navegacao">
@@ -244,8 +241,8 @@
                     <img src="images/logos/fb.png">
                     <img src="images/logos/twitter.png">
                     <img src="images/logos/pinterest.png">
-                    <img src="images/logos/twitter.png">
                     <img src="images/logos/tumblr.png">
+                    <img src="images/logos/google.png">
                 </div>
                 <div class="desktop_contato_copyright">
                     <p>&#9400; 2015 Merlin's Potions. All Rights Reserved</p>
@@ -263,7 +260,7 @@
                 </form>
             </div>
         </section>
-
+        <!--FIM DO FOOTER PARA DESKTOP-->
 
 
         <!--FOOTER PARA MOBILE-->
@@ -283,8 +280,8 @@
                     <img src="images/logos/fb.png">
                     <img src="images/logos/twitter.png">
                     <img src="images/logos/pinterest.png">
-                    <img src="images/logos/twitter.png">
                     <img src="images/logos/tumblr.png">
+                    <img src="images/logos/google.png">
                 </div>
                 <div class="mobile_contato_copyright">
                     <p>&#9400; 2015 Merlin's Potions. All Rights Reserved</p>
@@ -295,8 +292,6 @@
         <!--FIM DO FOOTER PARA MOBILE-->
 
     </footer>
-
-
 </body>
 
 </html>

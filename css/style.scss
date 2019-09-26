@@ -3,6 +3,7 @@
 *{
     padding:0;
     margin:0;
+    -webkit-tap-highlight-color: transparent;
 }
 body{
     font-family:  'Oswald', 'Droid sans';
@@ -104,11 +105,12 @@ header{
                     }
                 }
                 &_subtitulo{
-                    font-family:serif;
+                    font-family:'Droid Serif', Times New Roman, serif;
                     font-style:italic;
                     font-weight:900;
+                    margin-top:-5px;
+                    display: block;
                     color:$roxoNavbar;
-                    background:white;
                     position:relative;
                     &:before , &:after{
                         content:"";
@@ -120,12 +122,12 @@ header{
                     &:before{
                         position:absolute;
                         top:8px;
-                        left:-36px;
+                        left:-15px;
                     }
                     &:after{
                         position:absolute;
                         top:8px;
-                        right:-36px;
+                        right:-15px;
                     }
                 }
             }
@@ -377,7 +379,7 @@ header{
 
                 &_frete{
                     display:block;
-                    padding:5px;
+                    padding:5px 0px;
                     position:absolute;
                     bottom:0px;
                     width:100%;
@@ -451,6 +453,9 @@ main{
         &_titulo{
             padding:50px 0px;
             display:block; 
+            h2{
+                font-family:serif;
+            }
         }
         &_container{
             padding-bottom:40px;
@@ -571,7 +576,7 @@ main{
             width:100%;
             &_titulo{
                 text-align:center;
-                padding:0px;
+                padding:20px 0px;
             }
             &_container{
                 margin:0px;
@@ -621,7 +626,7 @@ main{
                     }
                     &_json{
                         padding:0px;
-                        padding-bottom:5px;
+                        padding-bottom:20px;
                     }
                 }
             }
