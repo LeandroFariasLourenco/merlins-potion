@@ -17,12 +17,17 @@ window.onload = function () {
 }
 
 
+
 function exibirPopUp(posicaoPotions) {
     let sobreposicao = document.querySelector("#sobreposicao");
+    let posicaoY = window.scrollY;
+    let posicaoX = window.scrollX;
+
     let sair = document.querySelector("#sairVitrine");
 
     sobreposicao.classList.remove("invisivel");
     sobreposicao.classList.add("visivel");
+
 
     preencherPopUp(posicaoPotions);
 

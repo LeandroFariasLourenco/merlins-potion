@@ -546,7 +546,40 @@ main{
                     height:225px;
                 }
             }
+
+            
+        &_sobreposicao{
+            &_popup{
+                position:relative;
+                width:80%;
+                padding:5px 20px;
+                &_sair{
+                    position:absolute;
+                    top:0px;
+                    right:0px;
+                    padding:0px;
+                    span{
+                        font-size:1.9em;
+                    }
+                }
+                &_imagem{
+                    width:100%;
+                    display:flex;
+                    justify-content:center;
+                    img{
+                        width:50%;
+                        height:50%;
+                    }
+                }
+                &_informacoes{
+                    width:100%;
+                    display:block;
+                    text-align:center;
+                }
+            }
         }
+        }
+
     }
 }
 
