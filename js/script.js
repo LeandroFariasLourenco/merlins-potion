@@ -29,6 +29,7 @@ function exibirPopUp(posicaoPotions) {
     sobreposicao.classList.remove("invisivel");
     sobreposicao.classList.add("visivel");
 
+    document.body.style.overflow = "hidden";
     //AO MESMO TEMPO QUE O MODAL FOR EXIBIDO, ELE É PREENCHIDO
     preencherPopUp(posicaoPotions);
 
@@ -36,6 +37,7 @@ function exibirPopUp(posicaoPotions) {
     sair.addEventListener("click", function () {
         sobreposicao.classList.remove("visivel");
         sobreposicao.classList.add("invisivel");
+        document.body.style.overflow = "initial";
     })
 }
 
