@@ -1,30 +1,3 @@
-# Desafio Front-end
-Com este pequeno desafio vamos avaliar o seu conhecimento técnico para entender melhor como você trabalha com o seu código, então mostre o seu melhor.
-
-## A missão:
-Sua missão é criar a página abaixo:
-
-![Merlins Potions Layout](src/assets/images/potions-layout.png)
-
-### O que esperamos:
-* Utilização de `Javascript` puro ou alguma biblioteca como `JQuery` e etc.
-* Um `HTML` escrito da maneira mais semântica possível.
-* `CSS` Com algum pré-processador de sua escolha (aqui utilizamos `SASS`).
-* Um layout responsivo e com boa aparencia.
-
-### Seria legal encontrar:
-* Utilização de gerenciadores de dependencias `npm`, `bower`, `yarn`.
-* Automação de tasks com `gulp` ou `webpack`.
-* Templates engine `PUGJS`, `JSX` e etc...
-* Metodologias CSS como `BEM CSS`, `SMACSS`, `ITCSS`.
-* Frameworks JS como `React`, `Vue.js`, `Angular`.
-* Otimizado para SEO e performance.
-* ES6 e Modularização de `Javascript`.
-* Buscar os dados da API fake [potions.json](https://cdn.rawgit.com/LucasRuy/1d4a5d45e2ea204d712d0b324af28bab/raw/342e0e9277be486102543c7f50ef5fcf193234b6/potions.json) e montar os lightbox a partir das infos contidos no mesmo.
-
-### O que não esperamos:
-* Frameworks para CSS como `Bootstrap`, `Foundation` e etc...
-
-### Observações
-* Lembrando que não é obrigatório aplicar todos os items descritos acima, não deixe de enviar o resultado do seu teste.
-* Todos os arquivos necessários para iniciar o desenvolvimento estão inclusos na pasta `src`.
+# Minha solução
+Esse desafio exigiu muita força de vontade minha, porque tive que usar alguns conceitos que eu não era muito familiar, como por exemplo o JSON porém no geral eu acredito que fico feliz com o resultado, corri atrás do que eu não sabia e tentei entregar meu melhor.
+Contudo, eu diria que esse projeto representa bem a minha dedicação e todo o conhecimento que aprendi durante meu tempo na Enext, foi um lugar aonde acima de tudo, consegui aprender muitas coisas novas e conhecer pessoas muito bacanas e profissionais incríveis.
